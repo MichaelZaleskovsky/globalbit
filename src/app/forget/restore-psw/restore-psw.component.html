@@ -1,0 +1,35 @@
+<div class="container-fluid ">
+  <div class="row d-flex justify-content-center h-100 ">
+    <div class=" col-sm-8 col-md-6  col-lg-5 col-xl-3 row-conformity row-centered  mt-3 align-self-center bg-light">
+      <div class="card mt-4 p-3">
+        <p >Forgot your password?</p>
+        <p class ="small">Enter your email address below and we will send you instructions on how to change you password</p>
+        <form class="card">
+
+
+
+
+          <input type="email" [(ngModel)]="email"
+                 class="form-control mt-3 pt-2 pb-4" id="email" [class.has-error]="emptyEmail" placeholder="Your email"  name="email">
+          <p *ngIf="emptyEmail" class="err-msg">* Please enter valid e-mail!</p>
+          <p *ngIf="sendingMsg">Your request have sent.</p>
+          <!--  <label for="pwd">Password:</label>-->
+
+
+          <button class="btn btn-lg btn-block mt-4" (click)="sendRestore()">Send</button>
+        </form>
+
+
+
+
+      </div>
+      <div class="mt-4">
+
+        <p class="text-center"><span> Return to </span><a routerLink="/register">Sign in</a> </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

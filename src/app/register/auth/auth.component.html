@@ -1,0 +1,47 @@
+<div class="container-fluid ">
+  <div class="row d-flex justify-content-center h-100 ">
+  <div class=" col-sm-8 col-md-6  col-lg-5 col-xl-3 row-conformity row-centered  mt-3 align-self-center bg-light">
+    <div class="card mt-4 p-3">
+      <p class ="small">Sign in with your Flatkit account</p>
+    <form class="card" class = "form-horizontal">
+
+
+      <input type="email" [(ngModel)]="user.email"
+             class="form-control mt-3 pt-2 pb-4" placeholder="Enter email" name="email">
+
+      <!--  <label for="pwd">Password:</label>-->
+      <div class="input-group" [class.has-error]="wrongPassword">
+        <input type="password" [(ngModel)]="user.password"
+             class="form-control mt-3 pt-2 pb-4" [class.has-error]="wrongPassword" placeholder="Enter password" name="pswd ">
+      </div>
+      <p *ngIf="serverError" class="err-msg">Internal server error</p>
+
+
+      <div class="checkbox mb-3" >
+
+        <input type="checkbox" value="remember-me" id = "remember" >
+        <div  class="checkBtn" (click)='toggleKeep()'>.</div>
+        <label class = "checkBx "for="remember" [class.checkBx1]='keepMarker' >Keep me signed in</label>
+
+
+
+      </div>
+      <button class="btn btn-lg btn-block" (click)="onSignIn()">Sign in</button>
+    </form>
+
+    </div>
+    <div class="mt-4">
+      <p class="text-center" ><a (click)="forgetPassword()" style="cursor: pointer">Forget password?</a></p>
+      <p class="text-center"><span >Do not have an accounts? </span> <a href ="#">Sign up</a> </p>
+    </div>
+  </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
