@@ -1,3 +1,5 @@
+JOB TEST FOR GlobalBit company
+
 # GlobalBigApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
